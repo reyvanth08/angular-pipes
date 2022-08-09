@@ -1,0 +1,73 @@
+<h1 style="text-align: center">Pipes</h1>
+<button mat-raised-button color="accent">Example</button>
+
+<div>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-chip-list aria-label="Fish selection">
+        <mat-chip>One fish</mat-chip>
+        <mat-chip>Two fish</mat-chip>
+        <mat-chip color="primary" selected>Primary fish</mat-chip>
+        <mat-chip color="accent" selected>Accent fish</mat-chip>
+      </mat-chip-list>
+    <ol>
+        <li>
+            <h4>Lower Case and Upper Case pipes</h4>
+        </li>
+        <ul>
+            <li>Lowercase: <span>{{ str | lowercase}}</span></li>
+            <li>Uppercase: <span>{{ str | uppercase}}</span></li>
+        </ul>
+        <li>
+            <h4>Date pipe</h4>
+        </li>
+        <ul>
+            <li>Today: <span>{{ today | date : 'medium' }}</span></li>
+            <li>Date: <span>{{ today | date: 'd/M/y' }}</span></li>
+            <li>Time: <span>{{ today | date: 'shortTime'}}</span></li>
+        </ul>
+        <li>
+            <h4>Currency</h4>
+        </li>
+        <ul>
+            <li>USD: <span>{{ usd | currency:"USD" }}</span></li>
+            <li>Rupee: <span>{{ usd | currency:"INR"}}</span></li>
+            <li>AUD: <span>{{ usd | currency:"AUD"}}</span></li>
+        </ul>
+        <li>
+            <h4>JSON data</h4>
+        </li>
+        <ul>
+            <li>Object: <span>{{ jsonObj | json }}</span></li>
+        </ul>
+        <li>
+            <h4>Percent</h4>
+        </li>
+        <ul>
+            <li>Percent: <span>{{ 00.99 | percent }}</span></li>
+        </ul>
+        <li>
+            <h4>Slice</h4>
+        </li>
+        <ul>
+            <li>Slice: <span>{{ months | slice:2:4 }}</span></li>
+        </ul>
+        <li>
+            <h4>Square Root</h4>
+        </li>
+        <ul>
+            <li>Square Root: <span>{{ 1000 | squareroot }}</span></li>
+        </ul>
+        <li>
+            <h4>Deciaml</h4>
+        </li>
+        <ul>
+            <li>Deciaml: <span>{{ 22.12345 | number:'3.3-4' }}</span></li>
+        </ul>
+    </ol>
+    
+    
+    
+</div>
